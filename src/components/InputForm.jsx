@@ -14,8 +14,8 @@ export const InputForm = ({
             style={[styles.input, focus === name && styles.activeInput]}
             name={name}
             placeholder={placeholder}
-            // onFocus={() => setFocus(name)}
-            // onBlur={() => setFocus(null)}
+            onFocus={() => setFocus(name)}
+            onBlur={() => setFocus(null)}
             // onChangeText={onChange}
             // value={value}
         />
