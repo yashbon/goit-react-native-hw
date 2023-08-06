@@ -18,9 +18,9 @@ const App = () => {
     });
     return (
         <View style={styles.container}>
-            {/* <RegistrationScreen /> */}
+            <RegistrationScreen />
             {/* <LoginScreen /> */}
-            <PostsScreen />
+            {/* <PostsScreen /> */}
         </View>
     );
 };
