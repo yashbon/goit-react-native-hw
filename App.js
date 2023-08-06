@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { RegistrationScreen } from "./src/Screens/RegistrationScreen";
 import { LoginScreen } from "./src/Screens/LoginScreen";
+import { PostsScreen } from "./src/Screens/PostsScreen";
 
 const App = () => {
     const styles = StyleSheet.create({
@@ -18,7 +19,8 @@ const App = () => {
     return (
         <View style={styles.container}>
             {/* <RegistrationScreen /> */}
-            <LoginScreen />
+            {/* <LoginScreen /> */}
+            <PostsScreen />
         </View>
     );
 };
