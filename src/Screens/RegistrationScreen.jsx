@@ -5,6 +5,7 @@ import {
     Linking,
     StyleSheet,
     Text,
+    TouchableOpacity,
     View,
 } from "react-native";
 
@@ -26,10 +27,22 @@ function RegistrationScreen() {
                     <PhotoUser />
                     <TitleForm text="Registration" />
                     <FormRegistation />
-                    <Text style={styles.text}>
-                        Already have an account?
-                        <Button title="Sign in" style={styles.textLink} />
-                    </Text>
+                    <View>
+                        <Text style={styles.text}>
+                            Already have an account? Log In
+                            {/* <Button
+                            title="Sign in"
+                            style={styles.caption}
+                            color="#1B4371"
+                        /> */}
+                        </Text>
+                        {/* <TouchableOpacity
+                            style={styles.button}
+                            // onPress={onPress}
+                        >
+                            <Text style={styles.buttonText}>Log In</Text>
+                        </TouchableOpacity> */}
+                    </View>
                 </View>
             </ImageBackground>
         </View>
@@ -73,11 +86,21 @@ const styles = StyleSheet.create({
     //     backgroundColor: "#000000c0",
     // },
     text: {
+        marginTop: 0,
+        marginLeft: 5,
         textAlign: "center",
         color: "#1B4371",
+        textAlignVertical: "top",
+        // textDecorationLine: "underline",
     },
-    textLink: {
-        color: "#000",
+    buttonText: {
+        // paddingTop: 5,
+        // margin: 0,
+        // padding: 0,
+        marginLeft: 5,
+        color: "#1B4371",
+        textAlignVertical: "bottom",
+        textDecorationLine: "underline",
     },
 });
 
