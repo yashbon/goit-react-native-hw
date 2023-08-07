@@ -16,24 +16,21 @@ import { FormLogin } from "../components/FormLogin";
 import { TitleForm } from "../components/TitleForm";
 import { PhotoUser } from "../components/PhotoUser";
 
-function LoginScreen(params) {
-    // console.log("login");
+function LoginScreen() {
     return (
         // <View style={styles.container}>
         <KeyboardAvoidingView
             behavior={Platform.OS === "ios" ? "padding" : "height"}
             style={styles.container}
-            keyboardVerticalOffset={-280}
+            keyboardVerticalOffset={-220}
         >
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <ImageBackground
                     source={image}
-                    // source={require("../../src/images/bg.png")}
                     resizeMode="cover"
                     style={styles.image}
                 >
-                    <View style={styles.reg}>
-                        {/* <PhotoUser /> */}
+                    <View style={styles.form}>
                         <TitleForm text="Sign in" />
                         <FormLogin />
                         <View>
@@ -60,6 +57,8 @@ function LoginScreen(params) {
     );
 }
 
+export { LoginScreen };
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -67,52 +66,29 @@ const styles = StyleSheet.create({
 
     image: {
         flex: 1,
-        justifyContent: "center",
-        // width: "100%",
-        // height: "100%",
+        justifyContent: "flex-end",
     },
-    reg: {
-        width: "100%",
-        height: 549,
+    form: {
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         paddingTop: 32,
-        paddingLeft: 16,
-        paddingRight: 16,
-        paddingBottom: 16,
+        paddingBottom: 111,
+        paddingHorizontal: 16,
         backgroundColor: "white",
-        bottom: 0,
-        position: "absolute",
-        // right: 16,
-        // top: "100%",
-        // transform: [{ translateY: -50 }],
-        // color: "#1B4371",
     },
-    // text: {
-    //     color: "white",
-    //     fontSize: 42,
-    //     lineHeight: 84,
-    //     fontWeight: "bold",
-    //     textAlign: "center",
-    //     backgroundColor: "#000000c0",
-    // },
+
     text: {
         marginTop: 0,
         marginLeft: 5,
         textAlign: "center",
         color: "#1B4371",
         textAlignVertical: "top",
-        // textDecorationLine: "underline",
     },
+
     buttonText: {
-        // paddingTop: 5,
-        // margin: 0,
-        // padding: 0,
         marginLeft: 5,
         color: "#1B4371",
         textAlignVertical: "bottom",
         textDecorationLine: "underline",
     },
 });
-
-export { LoginScreen };

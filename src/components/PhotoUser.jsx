@@ -22,13 +22,7 @@ const styles = StyleSheet.create({
     imageWrapper: {
         backgroundColor: "#F6F6F6",
         borderRadius: 16,
-        // borderColor: "#000",
-        // borderWidth: 1,
         overflow: "hidden",
-        // shadowColor: "#000",
-        // shadowRadius: 20,
-        // shadowOffset: { width: 10, height: 10 },
-        // elevation: 5,
     },
 
     image: {

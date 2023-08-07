@@ -9,7 +9,6 @@ const FormLogin = () => {
     const [password, setPassword] = useState("");
 
     const onSignIn = () => {
-        // console.log("click");
         console.log("email:", email);
         console.log("password:", password);
     };

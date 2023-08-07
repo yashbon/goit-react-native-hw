@@ -21,7 +21,6 @@ import { PhotoUser } from "../components/PhotoUser";
 function RegistrationScreen() {
     return (
         // <View style={styles.container}>
-
         <KeyboardAvoidingView
             behavior={Platform.OS === "ios" ? "padding" : "height"}
             style={styles.container}
@@ -30,17 +29,16 @@ function RegistrationScreen() {
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <ImageBackground
                     source={image}
-                    // source={require("../../src/images/bg.png")}
                     resizeMode="cover"
-                    style={styles.image}
+                    style={styles.bacground}
                 >
-                    <View style={styles.reg}>
+                    <View style={styles.form}>
                         <PhotoUser />
                         <TitleForm text="Registration" />
                         <FormRegistation />
                         <View>
                             <Text style={styles.text}>
-                                Already have an account? Sign In
+                                Already have an account? Sign Up
                                 {/* <Button
                             title="Sign in"
                             style={styles.caption}
@@ -62,70 +60,38 @@ function RegistrationScreen() {
     );
 }
 
+export { RegistrationScreen };
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
 
-    image: {
+    bacground: {
         flex: 1,
-        justifyContent: "center",
-        // width: "100%",
-        // height: "100%",
+        justifyContent: "flex-end",
     },
-    reg: {
-        width: "100%",
-        height: 549,
+    form: {
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         paddingTop: 92,
-        paddingLeft: 16,
-        paddingRight: 16,
-        paddingBottom: 16,
+        paddingBottom: 78,
+        paddingHorizontal: 16,
         backgroundColor: "white",
-        bottom: 0,
-        position: "absolute",
-        // right: 16,
-        // top: "100%",
-        // transform: [{ translateY: -50 }],
-        // color: "#1B4371",
     },
-    // text: {
-    //     color: "white",
-    //     fontSize: 42,
-    //     lineHeight: 84,
-    //     fontWeight: "bold",
-    //     textAlign: "center",
-    //     backgroundColor: "#000000c0",
-    // },
+
     text: {
         marginTop: 0,
         marginLeft: 5,
         textAlign: "center",
         color: "#1B4371",
-        textAlignVertical: "top",
-        // textDecorationLine: "underline",
     },
     buttonText: {
-        // paddingTop: 5,
-        // margin: 0,
-        // padding: 0,
-        marginLeft: 5,
         color: "#1B4371",
         textAlignVertical: "bottom",
         textDecorationLine: "underline",
     },
-    // });
 
-    // const styles = StyleSheet.create({
-    //     container: {
-    //         flex: 1,
-    //     },
-    // inner: {
-    //     padding: 24,
-    //     flex: 1,
-    //     justifyContent: "space-around",
-    // },
     header: {
         fontSize: 36,
         marginBottom: 48,
@@ -141,5 +107,3 @@ const styles = StyleSheet.create({
         marginTop: 12,
     },
 });
-
-export { RegistrationScreen };

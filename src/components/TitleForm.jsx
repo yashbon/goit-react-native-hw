@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     title: {
         color: "#212121",
         fontSize: 30,
-        // fontFamily: "Roboto_500Medium",
         letterSpacing: 0.3,
         textAlign: "center",
         paddingBottom: 32,

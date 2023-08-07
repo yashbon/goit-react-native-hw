@@ -1,4 +1,4 @@
-import { Alert, View, TouchableWithoutFeedback, Keyboard } from "react-native";
+import { View, TouchableWithoutFeedback, Keyboard } from "react-native";
 import { InputForm } from "./InputForm";
 import { ButtonForm } from "./ButtonForm";
 import { useState } from "react";
@@ -10,12 +10,9 @@ const FormRegistation = () => {
     const [password, setPassword] = useState("");
 
     const onSignup = () => {
-        // console.log("click");
         console.log("login:", login);
         console.log("email:", email);
         console.log("password:", password);
-
-        // Alert.alert(`${login}, ${email}, ${password}`);
     };
 
     return (

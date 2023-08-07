@@ -10,10 +10,5 @@ const styles = StyleSheet.create({
         fontWeight: "500",
         textAlign: "center",
         color: "#212121",
-        // fontSize: 30,
-        // // fontFamily: "Roboto_500Medium",
-        // letterSpacing: 0.3,
-        // textAlign: "center",
-        // paddingBottom: 32,
     },
 });
