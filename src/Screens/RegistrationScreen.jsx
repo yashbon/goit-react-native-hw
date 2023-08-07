@@ -40,7 +40,7 @@ function RegistrationScreen() {
                         <FormRegistation />
                         <View>
                             <Text style={styles.text}>
-                                Already have an account? Log In
+                                Already have an account? Sign In
                                 {/* <Button
                             title="Sign in"
                             style={styles.caption}

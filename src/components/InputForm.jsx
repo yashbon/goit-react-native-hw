@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { StyleSheet, TextInput } from "react-native";
 
-export const InputForm = ({
-    placeholder,
-    name,
-    // onChange,
-    // value,
-}) => {
+export const InputForm = ({ placeholder, name, onChange, value }) => {
     const [focus, setFocus] = useState(null);
 
     return (
@@ -16,8 +11,8 @@ export const InputForm = ({
             placeholder={placeholder}
             onFocus={() => setFocus(name)}
             onBlur={() => setFocus(null)}
-            // onChangeText={onChange}
-            // value={value}
+            onChangeText={onChange}
+            value={value}
         />
     );
 };
