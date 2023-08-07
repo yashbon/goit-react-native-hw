@@ -15,7 +15,7 @@ const FormRegistation = () => {
         console.log("email:", email);
         console.log("password:", password);
 
-        Alert.alert(`${login}, ${email}, ${password}`);
+        // Alert.alert(`${login}, ${email}, ${password}`);
     };
 
     return (
@@ -39,7 +39,7 @@ const FormRegistation = () => {
                     onChange={setPassword}
                     value={password}
                 />
-                <ButtonForm caption="To register" onSignup={onSignup} />
+                <ButtonForm caption="To register" onSubmit={onSignup} />
             </View>
         </TouchableWithoutFeedback>
     );

@@ -1,8 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-export const ButtonForm = ({ caption, onSignup }) => {
+export const ButtonForm = ({ caption, onSubmit }) => {
     return (
-        <TouchableOpacity style={styles.button} onPress={onSignup}>
+        <TouchableOpacity style={styles.button} onPress={onSubmit}>
             <Text style={styles.buttonText}>{caption}</Text>
         </TouchableOpacity>
     );
