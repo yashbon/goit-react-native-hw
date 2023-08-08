@@ -5,13 +5,13 @@ import { UserCard } from "../components/UserCard";
 
 function PostsScreen(params) {
     return (
-        // <SafeAreaView style={styles.container}>
-        <View style={styles.posts}>
-            <TitlePosts text="Posts" style={styles.title} />
-            <Feather name="log-out" size={24} style={styles.icon} />
-            <UserCard style={styles.crad} />
-        </View>
-        // </SafeAreaView>
+        <SafeAreaView style={styles.container}>
+            <View style={styles.posts}>
+                {/* <TitlePosts text="Posts" style={styles.title} /> */}
+                <Feather name="log-out" size={24} style={styles.icon} />
+                <UserCard style={styles.crad} />
+            </View>
+        </SafeAreaView>
     );
 }
 
@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
         width: "100%",
         height: 88,
         // marginTop: 44,
-        marginBottom: 32,
-        paddingTop: 54,
+        // marginBottom: 32,
+        // paddingTop: 54,
         // paddingBottom: 11,
         borderBottomColor: "#e8e8e8",
         borderBottomWidth: 1,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     icon: {
         position: "absolute",
         // marginTop: 44,
-        top: 54,
+        // top: 54,
         right: 10,
         color: "#BDBDBD",
     },
