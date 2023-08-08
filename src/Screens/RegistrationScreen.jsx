@@ -18,7 +18,7 @@ import { FormRegistation } from "../components/FormRegistration";
 import { TitleForm } from "../components/TitleForm";
 import { PhotoUser } from "../components/PhotoUser";
 
-function RegistrationScreen() {
+function RegistrationScreen({ navigation }) {
     return (
         // <View style={styles.container}>
         <KeyboardAvoidingView
