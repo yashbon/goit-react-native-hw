@@ -32,11 +32,7 @@ export const InputPassForm = ({ onChange, value }) => {
                 value={value}
             />
             <TouchableOpacity style={styles.show} onPress={showPassword}>
-                <Text
-                // onPress={showPassword}
-                >
-                    {showPass ? "Show" : "Hide"}
-                </Text>
+                <Text>{showPass ? "Show" : "Hide"}</Text>
             </TouchableOpacity>
         </View>
     );
