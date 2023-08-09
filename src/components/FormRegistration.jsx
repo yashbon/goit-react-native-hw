@@ -9,10 +9,14 @@ const FormRegistation = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const onSignup = () => {
+    const onSignup = (event) => {
         console.log("login:", login);
         console.log("email:", email);
         console.log("password:", password);
+
+        setLogin("");
+        setEmail("");
+        setPassword("");
     };
 
     return (

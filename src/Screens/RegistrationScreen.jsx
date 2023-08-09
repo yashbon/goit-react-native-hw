@@ -6,6 +6,7 @@ import {
     View,
     TouchableWithoutFeedback,
     Keyboard,
+    KeyboardAvoidingView,
 } from "react-native";
 
 import image from "../../src/images/bg.png";
@@ -15,26 +16,32 @@ import { PhotoUser } from "../components/PhotoUser";
 
 function RegistrationScreen({ navigation }) {
     return (
-        <View style={styles.container}>
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-                <ImageBackground
-                    source={image}
-                    resizeMode="cover"
-                    style={styles.bacground}
-                >
-                    <View style={styles.form}>
-                        <PhotoUser />
-                        <TitleForm text="Registration" />
-                        <FormRegistation />
-                        <View>
-                            <Text style={styles.text}>
-                                Already have an account? Sign Up
-                            </Text>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <KeyboardAvoidingView
+                behavior={Platform.OS === "ios" ? "padding" : "height"}
+                style={styles.container}
+                keyboardVerticalOffset={-180}
+            >
+                <View style={styles.container}>
+                    <ImageBackground
+                        source={image}
+                        resizeMode="cover"
+                        style={styles.bacground}
+                    >
+                        <View style={styles.form}>
+                            <PhotoUser />
+                            <TitleForm text="Registration" />
+                            <FormRegistation />
+                            <View>
+                                <Text style={styles.text}>
+                                    Already have an account? Sign Up
+                                </Text>
+                            </View>
                         </View>
-                    </View>
-                </ImageBackground>
-            </TouchableWithoutFeedback>
-        </View>
+                    </ImageBackground>
+                </View>
+            </KeyboardAvoidingView>
+        </TouchableWithoutFeedback>
     );
 }
 
