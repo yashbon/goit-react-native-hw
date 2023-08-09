@@ -14,12 +14,12 @@ import { TitleForm } from "../components/TitleForm";
 
 function LoginScreen() {
     return (
-        <KeyboardAvoidingView
-            behavior={Platform.OS === "ios" ? "padding" : "height"}
-            style={styles.container}
-            keyboardVerticalOffset={-220}
-        >
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <KeyboardAvoidingView
+                behavior={Platform.OS === "ios" ? "padding" : "height"}
+                style={styles.container}
+                keyboardVerticalOffset={-220}
+            >
                 <ImageBackground
                     source={image}
                     resizeMode="cover"
@@ -35,8 +35,8 @@ function LoginScreen() {
                         </View>
                     </View>
                 </ImageBackground>
-            </TouchableWithoutFeedback>
-        </KeyboardAvoidingView>
+            </KeyboardAvoidingView>
+        </TouchableWithoutFeedback>
     );
 }
 

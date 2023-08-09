@@ -11,6 +11,8 @@ const FormLogin = () => {
     const onSignIn = () => {
         console.log("email:", email);
         console.log("password:", password);
+        setEmail("");
+        setPassword("");
     };
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
